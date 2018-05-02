@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ad0a799-d2cb-4472-bfa1-1f3326cd85f8" name="Default" comment="" />
+    <list default="true" id="0ad0a799-d2cb-4472-bfa1-1f3326cd85f8" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/openshift/scripts/run-in-container.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openshift/templates/django-pg-persistent.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openshift/templates/django-pg.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openshift/templates/django.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -11,16 +17,39 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="pyvenv.cfg" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/venv/pyvenv.cfg">
-          <provider selected="true" editor-type-id="text-editor" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="django-pg.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/openshift/templates/django-pg.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="577">
+              <caret line="528" column="1" selection-start-line="528" selection-start-column="1" selection-end-line="528" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="django-pg-persistent.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/openshift/templates/django-pg-persistent.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="577">
+              <caret line="554" column="1" selection-start-line="554" selection-start-column="1" selection-end-line="554" selection-end-column="1" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/openshift/scripts/run-in-container.sh" />
+        <option value="$PROJECT_DIR$/openshift/templates/django.json" />
+        <option value="$PROJECT_DIR$/openshift/templates/django-pg.json" />
+        <option value="$PROJECT_DIR$/openshift/templates/django-pg-persistent.json" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1680" />
@@ -36,6 +65,28 @@
           <expand>
             <path>
               <item name="seite50" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seite50" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seite50" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seite50" type="462c0819:PsiDirectoryNode" />
+              <item name="openshift" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seite50" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seite50" type="462c0819:PsiDirectoryNode" />
+              <item name="openshift" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seite50" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seite50" type="462c0819:PsiDirectoryNode" />
+              <item name="openshift" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="seite50" type="b2602c69:ProjectViewProjectNode" />
+              <item name="seite50" type="462c0819:PsiDirectoryNode" />
               <item name="seite50" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -77,32 +128,68 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24954791" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24954791" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Python Console" visible="true" weight="0.32923076" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32923076" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32923076" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32923076" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/seite50/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/venv/pyvenv.cfg">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openshift/scripts/run-in-container.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openshift/templates/django.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="313" column="1" selection-start-line="313" selection-start-column="1" selection-end-line="313" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openshift/templates/django-pg.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="528" column="1" selection-start-line="528" selection-start-column="1" selection-end-line="528" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/openshift/templates/django-pg-persistent.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="554" column="1" selection-start-line="554" selection-start-column="1" selection-end-line="554" selection-end-column="1" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
