@@ -1,10 +1,12 @@
-from django.conf.urls import url, include
+from django.conf.urls import url
 from rest_framework.urlpatterns import  format_suffix_patterns
-from .views import CreateView, DetailsView
+from .views import CreateBookView, DetailsBookView, CreateAuthorView, DetailsAuthorView
 
 urlpatterns = {
-    url(r'^api/$',CreateView.as_view(),name="create"),
-    url(r'^api/(?P<pk>[0-9]+)/$',DetailsView.as_view(),name="details")
+    url(r'^api/book/$',CreateBookView.as_view(),name="create"),
+    url(r'^api/book/(?P<pk>[0-9]+)/$',DetailsBookView.as_view(),name="details"),
+    url(r'^api/author/$', CreateAuthorView.as_view(), name="create"),
+    url(r'^api/author/(?P<pk>[0-9]+)/$', DetailsAuthorView.as_view(), name="details")
 }
 
 urlpatterns = format_suffix_patterns(urlpatterns)

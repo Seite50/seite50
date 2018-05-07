@@ -9,8 +9,19 @@ class ModelTestCase(TestCase):
 
 
     def setUp(self):
-        self.name = "Buchname"
-        self.book = Book(name=self.name)
+        self.id = "asdfhasdf"
+        self.title = "TestBuch"
+        self.author = "Markus Hartmann"
+        self.description ="Ein Buch über das Testen"
+        self.published_date = "2018-05-07"
+        self.seite50_sentence = "Uch wie ist das schön"
+
+        self.book = Book(id=self.id,
+                         title=self.title,
+                         author = self.author,
+                         description = self.description,
+                         published_date = self.published_date,
+                         seite50_sentence = self.seite50_sentence)
 
     def test_model_can_create_a_book(self):
         old_count = Book.objects.count()
@@ -23,7 +34,13 @@ class ViewTestCase(TestCase):
 
     def setUp(self):
         self.client = APIClient()
-        self.book_data = {'name': "testname"}
+        self.book_data = {'id': "1234",
+                          'title': "TestBuch",
+                          'author': "Markus Hartmann",
+                          'description': "Ein Buch über das Testen",
+                          'published_date': "2018-05-07",
+                          'seite50_sentence': "Uch wie ist das schön",
+                          }
         self.response = self.client.post(
             reverse('create'),
             self.book_data,
@@ -45,10 +62,10 @@ class ViewTestCase(TestCase):
 
     def test_api_can_update_book(self):
         book = Book.objects.get()
-        change_book = {'name': 'new name'}
+        change_book = {'title': 'new'}
         res = self.client.put(
             reverse('details', kwargs={'pk': book.id}),
-            change_book, format='json',
+            change_book, format='json'
         )
 
         self.assertEqual(res.status_code, status.HTTP_200_OK)
@@ -59,3 +76,5 @@ class ViewTestCase(TestCase):
             reverse('details', kwargs={'pk':book.id}),
             format='json', follow=True
         )
+
+        self.assertEquals(response.status_code, status.HTTP_204_NO_CONTENT)
