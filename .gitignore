@@ -101,3 +101,6 @@ ENV/
 .mypy_cache/
 .idea/workspace.xml
 db.sqlite3
+
+# vscode
+.vscode/tags
