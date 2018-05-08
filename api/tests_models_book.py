@@ -1,15 +1,12 @@
 from django.test import TestCase
-from rest_framework.test import APIClient
-from rest_framework import status
-from django.urls import reverse
+
 from .models_book import Book
 
 # Create your tests here.
 class ModelTestCase(TestCase):
 
-
     def setUp(self):
-        self.bookid = "asdfhasdf"
+        self.bookid = "1234"
         self.title = "TestBuch"
         self.description ="Ein Buch über das Testen"
         self.published_date = "2018-05-07"
@@ -26,3 +23,8 @@ class ModelTestCase(TestCase):
         self.book.save()
         new_count = Book.objects.count()
         self.assertNotEqual(old_count, new_count)
+        
+
+    def test_model_model_can_create_a_correct_book(self):
+        db_book = Book.objects.get(bookid=1234)
+        self.assertEqual(db_book,self.book)

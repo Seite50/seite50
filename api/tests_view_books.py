@@ -35,16 +35,16 @@ class ViewTestCase(TestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertContains(response,book)
 
- #   def test_api_can_update_book(self):
- #       book = Book.objects.get()#
-#
- #       change_book = {'title': "new"}
-   #     res = self.client.put(
-  ##          reverse('details', kwargs={'pk': book.id}),
-   #         change_book, format='json'
-    #    )
+    def test_api_can_update_book(self):
+        book = Book.objects.get()#
 
-     #   self.assertEqual(res.status_code, status.HTTP_200_OK)
+        change_book = {'title': "new"}
+        res = self.client.put(
+           reverse('details', kwargs={'pk': book.id}),
+           change_book, format='json'
+        )
+
+       self.assertEqual(res.status_code, status.HTTP_200_OK)
 
     def test_api_can_delete_book(self):
         book = Book.objects.get()
