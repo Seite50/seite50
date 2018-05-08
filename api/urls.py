@@ -1,6 +1,8 @@
 from django.conf.urls import url
 from rest_framework.urlpatterns import  format_suffix_patterns
-from .views import CreateBookView, DetailsBookView, CreateAuthorView, DetailsAuthorView
+from .views_author import CreateAuthorView, DetailsAuthorView
+from .views_book import CreateBookView, DetailsBookView
+
 
 urlpatterns = {
     url(r'^api/book/$',CreateBookView.as_view(),name="create"),
