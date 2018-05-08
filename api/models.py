@@ -2,7 +2,8 @@ from django.db import models
 
 # Create your models here.
 class Book(models.Model):
-    id = models.CharField(max_length=255,unique=True,blank=False,primary_key=True)
+    id = models.AutoField(primary_key=True)
+    bookid = models.CharField(max_length=255,blank=False,)
     title = models.CharField(max_length=255, blank=False, unique=False)
     description = models.CharField(max_length=255, blank=False, unique=False)
     published_date = models.DateField(blank=False, unique=False)
