@@ -8,7 +8,7 @@ class ModelTestCase(TestCase):
     def setUp(self):
         self.bookid = "1234"
         self.title = "TestBuch"
-        self.description ="Ein Buch über das Testen"
+        self.description = "Ein Buch über das Testen"
         self.published_date = "2018-05-07"
         self.seite50_sentence = "Uch wie ist das schön"
 
@@ -26,5 +26,5 @@ class ModelTestCase(TestCase):
         
 
     def test_model_model_can_create_a_correct_book(self):
-        db_book = Book.objects.get(bookid=1234)
+        db_book = Book.objects.get()
         self.assertEqual(db_book,self.book)
