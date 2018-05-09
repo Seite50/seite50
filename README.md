@@ -38,7 +38,7 @@ Ich habe eine Übersicht, über von mir gelesene Bücher, die aber nicht in mein
 * Soll es Benachrichtigungen geben?
 * Soll ein Ausleihdatum festgelegt werden?
 ## Speichern des Lese-Status
-* Welche Stati soll es geben?
+* Welche Status soll es geben?
 * Wer soll diese Attribute sehen können?
 ## Speichern ob ein Buch im Besitz ist
 * Einfaches Ja/Nein?
