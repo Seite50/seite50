@@ -23,7 +23,6 @@ class ModelTestCase(TestCase):
         self.book.save()
         new_count = Book.objects.count()
         self.assertNotEqual(old_count, new_count)
-        
 
     def test_model_model_can_create_a_correct_book(self):
         db_book = Book.objects.get()
