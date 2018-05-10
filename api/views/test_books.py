@@ -1,11 +1,11 @@
 from django.test import TestCase
-from rest_framework.test import  APITestCase
+from rest_framework.test import APITestCase
 from rest_framework import status
 from django.urls import reverse
 from api.models.book import Book
 
-class ViewTestCase(APITestCase):
 
+class ViewTestCase(APITestCase):
     def setUp(self):
         self.book.save()
 
@@ -25,21 +25,19 @@ class ViewTestCase(APITestCase):
             'seite50_sentence': cls.seite50_sentence,
         }
 
-        cls.book = Book(bookid=cls.bookid,
-                         title=cls.title,
-                         description = cls.description,
-                         published_date = cls.published_date,
-                         seite50_sentence = cls.seite50_sentence)
+        cls.book = Book(
+            bookid=cls.bookid,
+            title=cls.title,
+            description=cls.description,
+            published_date=cls.published_date,
+            seite50_sentence=cls.seite50_sentence)
 
     def test_api_can_create_a_book(self):
         """
         Es wird sichergestellt, dass ein Buch erstellt werden kann
         """
         res = self.client.post(
-            reverse('create'),
-            self.book_data,
-            format="json"
-        )
+            reverse('create'), self.book_data, format="json")
         self.assertEqual(res.status_code, status.HTTP_201_CREATED)
 
     def test_api_can_get_a_book(self):
@@ -47,23 +45,20 @@ class ViewTestCase(APITestCase):
         Es wird sichergestellt, dass ein Buch gelesen werden kann
         """
         response = self.client.get(
-            reverse('details',kwargs={'pk': self.book.id}),
-            format='json'
-        )
+            reverse('details', kwargs={'pk': self.book.id}), format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        
+
     def test_api_can_update_book(self):
         response = self.client.put(
-           reverse('details', kwargs={'pk': self.book.id}),
-           {'title': "new"}, format='json'
-        )
+            reverse('details', kwargs={'pk': self.book.id}), {'title': "new"},
+            format='json')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_api_can_delete_book(self):
         response = self.client.delete(
-            reverse('details', kwargs={'pk':self.book.id}),
-            format='json', follow=True
-        )
+            reverse('details', kwargs={'pk': self.book.id}),
+            format='json',
+            follow=True)
 
         self.assertEquals(response.status_code, status.HTTP_204_NO_CONTENT)

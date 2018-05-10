@@ -7,8 +7,7 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
@@ -36,6 +35,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='author',
             name='publications',
-            field=models.ManyToManyField(blank=True, related_name='authored_by', to='api.Book'),
+            field=models.ManyToManyField(
+                blank=True, related_name='authored_by', to='api.Book'),
         ),
     ]
