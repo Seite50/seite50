@@ -1,7 +1,7 @@
 from django.conf.urls import url
 from rest_framework.urlpatterns import  format_suffix_patterns
-from .views_author import CreateAuthorView, DetailsAuthorView
-from .views_book import CreateBookView, DetailsBookView
+from api.views.author import CreateAuthorView, DetailsAuthorView
+from api.views.book import CreateBookView, DetailsBookView
 
 
 urlpatterns = {

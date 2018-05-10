@@ -1,5 +1,6 @@
+from api.models.book import Book
 from django.db import models
-from .models_book import Book
+
 
 class Author(models.Model):
 

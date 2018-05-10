@@ -1,9 +1,9 @@
 from django.shortcuts import render
 
 from rest_framework import generics
-from .serializers_author import AuthorSerializer
+from api.serializers.author import AuthorSerializer
 
-from .models_author import Author
+from api.models.author import Author
 
 class CreateAuthorView(generics.ListCreateAPIView):
     queryset = Author.objects.all()
