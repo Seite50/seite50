@@ -5,6 +5,8 @@ from api.models.book import Book
 
 # Create your tests here.
 class ModelTestCase(TestCase):
+    fixtures = ['books.json']
+
     @classmethod
     def setUpTestData(cls):
         cls.bookid = "1234"
@@ -27,6 +29,5 @@ class ModelTestCase(TestCase):
         self.assertNotEqual(old_count, new_count)
 
     def test_model_model_can_create_a_correct_book(self):
-        self.book.save()
         db_book = Book.objects.get()
-        self.assertEqual(db_book, self.book)
+        self.assertEqual(db_book.title, 'Der Kategorische Imperativ ist keine Stellung beim Sex')
