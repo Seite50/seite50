@@ -7,4 +7,4 @@ class BookSerializer(serializers.ModelSerializer):
         model = Book
         fields = ('id', 'bookid', 'title', 'date_created', 'date_modified',
                   'description', 'published_date', 'seite50_sentence')
-        read_only_fields = ('date_created', 'date_modified')
+        read_only_fields = ('date_created', 'date_modified', 'id')
