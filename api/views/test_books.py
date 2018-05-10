@@ -5,12 +5,24 @@ from django.urls import reverse
 from api.models.book import Book
 
 
-class ViewTestCase(APITestCase):
+class BookViewTestCase(APITestCase):
+    """
+    Test-Cases für die View Book
+    """
+
+
     def setUp(self):
+        """
+        Daten die für jeden Test auf´s neue benötigt werden 
+        """
         self.book.save()
+
 
     @classmethod
     def setUpTestData(cls):
+        """
+        Daten die für alle Tests benötigt werden
+        """
         cls.bookid = "1234"
         cls.title = "TestBuch"
         cls.description = "Ein Buch ueber das Testen"
@@ -32,6 +44,7 @@ class ViewTestCase(APITestCase):
             published_date=cls.published_date,
             seite50_sentence=cls.seite50_sentence)
 
+
     def test_api_can_create_a_book(self):
         """
         Es wird sichergestellt, dass ein Buch erstellt werden kann
@@ -39,6 +52,7 @@ class ViewTestCase(APITestCase):
         res = self.client.post(
             reverse('create'), self.book_data, format="json")
         self.assertEqual(res.status_code, status.HTTP_201_CREATED)
+
 
     def test_api_can_get_a_book(self):
         """
@@ -48,14 +62,22 @@ class ViewTestCase(APITestCase):
             reverse('details', kwargs={'pk': self.book.id}), format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
+
     def test_api_can_update_book(self):
+        """
+        Es wird sichergestellt, dass ein Buch geändert werden kann
+        """
         response = self.client.put(
             reverse('details', kwargs={'pk': self.book.id}), {'title': "new"},
             format='json')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
+
     def test_api_can_delete_book(self):
+        """
+        Es wird sichergestellt, dass ein Buch gelöscht werden kann
+        """
         response = self.client.delete(
             reverse('details', kwargs={'pk': self.book.id}),
             format='json',

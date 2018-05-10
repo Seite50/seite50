@@ -7,6 +7,9 @@ from api.models.author import Author
 
 
 class CreateAuthorView(generics.ListCreateAPIView):
+    """
+    Einfache view zum Anlegen von Authoren
+    """
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
 
@@ -15,6 +18,8 @@ class CreateAuthorView(generics.ListCreateAPIView):
 
 
 class DetailsAuthorView(generics.RetrieveUpdateDestroyAPIView):
-
+    """
+    Einfache View zum Abrufen, Verändern, Löschen von Authoren
+    """
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
