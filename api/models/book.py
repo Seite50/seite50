@@ -6,10 +6,10 @@ class Book(models.Model):
     id = models.AutoField(primary_key=True)
     bookid = models.CharField(max_length=255, blank=False, unique=False)
     title = models.CharField(max_length=255, blank=False, unique=False)
-    description = models.CharField(max_length=255, blank=False, unique=False)
-    published_date = models.DateField(blank=False, unique=False)
+    description = models.CharField(max_length=255, blank=True, unique=False)
+    published_date = models.DateField(blank=True, unique=False)
     seite50_sentence = models.CharField(
-        max_length=4096, blank=False, unique=False)
+        max_length=4096, blank=True, unique=False)
 
     # Metadata
     date_created = models.DateTimeField(auto_now_add=True)
