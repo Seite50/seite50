@@ -1,5 +1,4 @@
 from django.test import TestCase
-
 from api.models.book import Book
 
 
