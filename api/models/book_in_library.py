@@ -1,13 +1,14 @@
 from django.db import models
 from api.models.user import User
+from api.models.book import Book
 
 
 # Create your models here.
-class Library(models.Model):
+class BookInLibrary(models.Model):
     id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=255, blank=False, unique=True)
 
-    owner = models.ManyToManyField(User, related_name="organized_by", blank=False)
+    book = models.ManyToManyField(Book, related_name="is_avaiable", blank=False)
+    borrowed_by = models.ManyToOneRel(User, blank=True)
 
     # Metadata
     date_created = models.DateTimeField(auto_now_add=True)
