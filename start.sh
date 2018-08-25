@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python ./manage.py migrate && python ./manage.py runserver
+python ./manage test && python ./manage.py migrate && python ./manage.py runserver
